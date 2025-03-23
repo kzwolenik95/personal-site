@@ -26,6 +26,8 @@ jobs:
     env:
       TF_TOKEN_app_terraform_io: ${{ secrets.HCP_TERRAFORM_TOKEN }}
       TF_FORCE_LOCAL_BACKEND: 1
+      TF_VAR_repository_name: ${{ github.repository }}
+      TF_VAR_github_token: ${{ env.GITHUB_TOKEN }}
     defaults:
       run:
         working-directory: terraform
