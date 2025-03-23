@@ -205,3 +205,6 @@ a.printButton:hover {
 [theme="dark"] a.printButton:hover {
   color: #ffffff;
 }
+#resume-pages-container strong {
+  font-weight: 550;
+}
