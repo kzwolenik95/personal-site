@@ -20,6 +20,15 @@
   }
 }
 
+@media screen and (max-width: 210mm) {
+  #resume-pages-container {
+    justify-content: left !important;
+    padding-left: 0 !important;
+    margin-left: -1rem !important;
+  }
+
+}
+
 .resume-flex-container-cols {
   display: flex;
   justify-content: center;
@@ -177,10 +186,22 @@ img {
   display: inline-block;
   text-align: left;
 }
-a#printButton {
-  background-color: #0062cc;
-  /* color: white; */
+a.printButton {
   padding: 10px;
   border-radius: 5px;
-  /* text-decoration: none; */
+}
+
+a.printButton {
+  background-color: #478eda;
+}
+a.printButton:hover {
+  color: #ffffff;
+}
+
+[theme="dark"] a.printButton {
+  background-color: #00458f;
+  color: #b3b3b3;
+}
+[theme="dark"] a.printButton:hover {
+  color: #ffffff;
 }

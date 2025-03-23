@@ -8,8 +8,8 @@ menu:
   main:
     name: "Print Resume"
     weight: -5
-    pre: '<a id=printButton href="" onclick=''if(window.location.pathname == "/resume/") { window.print(); } return false;'' style="display: none;"><i class="fas fa-print"></i>'
-    post: '<script> if (window.location.pathname === "/resume/") { document.getElementById("printButton").style.display = ""; }</script>'
+    pre: '<a class=printButton href="" onclick=''if(window.location.pathname == "/resume/") { window.print(); } return false;'' style="display: none;"><i class="fas fa-print"></i>'
+    post: '<script> if (window.location.pathname === "/resume/") { document.querySelectorAll(".printButton").forEach(el => el.style.display = ""); }</script>'
 name: Krzysztof Zwolenik
 pro_title: DevOps engineer
 personal_data:
