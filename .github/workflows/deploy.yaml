@@ -28,6 +28,8 @@ jobs:
       TF_FORCE_LOCAL_BACKEND: 1
       TF_VAR_repository_name: ${{ github.event.repository.name }}
       TF_VAR_github_token: ${{ secrets.GH_PAT_TOKEN }}
+      TF_VAR_cloudflare_api_token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      TF_VAR_apex_domain: ${{ vars.APEX_DOMAIN }}
     defaults:
       run:
         working-directory: terraform
