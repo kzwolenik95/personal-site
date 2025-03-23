@@ -15,11 +15,11 @@ data "cloudflare_zones" "domain-zone" {
 }
 
 resource "cloudflare_dns_record" "apex" {
-  for_each = var.GitHub_a_records
+  count   = length(var.GitHub_a_records)
 
   zone_id = data.cloudflare_zones.domain-zone.result.0.id
   comment = "Github pages- ${var.apex_domain}"
-  content = each.value
+  content = var.GitHub_a_records[count.index]
   name    = var.apex_domain
   proxied = false
   ttl     = 3600
