@@ -9,7 +9,6 @@ permissions:
   contents: read
   pages: write
   id-token: write
-  security-events: read
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -28,7 +27,7 @@ jobs:
       TF_TOKEN_app_terraform_io: ${{ secrets.HCP_TERRAFORM_TOKEN }}
       TF_FORCE_LOCAL_BACKEND: 1
       TF_VAR_repository_name: ${{ github.event.repository.name }}
-      TF_VAR_github_token: ${{ secrets.GITHUB_TOKEN }}
+      TF_VAR_github_token: ${{ secrets.GH_PAT_TOKEN }}
     defaults:
       run:
         working-directory: terraform
