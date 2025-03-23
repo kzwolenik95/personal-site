@@ -2,9 +2,6 @@ resource "github_repository" "repo" {
   name = var.repository_name
 
   pages {
-    source {
-      branch = "main"
-    }
     build_type = "workflow"
     cname      = "www.${var.apex_domain}"
   }
