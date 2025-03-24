@@ -1,6 +1,6 @@
-{{ define "title" }}{{ .Title }}{{ end }}
-{{- define "content" -}} {{ $path := "js/script.js" }} {{ $js := resources.Get
-$path | resources.ExecuteAsTemplate $path . }}
+{{ define "title" }}{{ .Title }}{{ end }} {{- define "content" -}} {{ $path :=
+"js/script.js" }} {{ $js := resources.Get $path | resources.ExecuteAsTemplate
+$path . }}
 <script
   async
   language="javascript"
@@ -12,14 +12,14 @@ $path | resources.ExecuteAsTemplate $path . }}
 <link
   href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&display=swap"
   rel="stylesheet" />
-
 <link rel="stylesheet" href="/styles.css" />
 <div id="resume-pages-container">
   <div class="resume-page">
     <div class="resume-content">
       <div class="resume-section-photo">
         <div class="resume-photo">
-          <img src="/PP.png" />
+          {{ $resizedImage := (resources.Get "PP.png").Resize "180x180" }}
+          <img src="{{ $resizedImage.RelPermalink }}" />
         </div>
         <div class="one">
           <span id="cv-name">{{ $.Params.name }}</span>
@@ -34,19 +34,20 @@ $path | resources.ExecuteAsTemplate $path . }}
             {{ end }} {{ end }}
           </div>
         </div>
+        <div id="resume-pro-description">
+          {{ $.Params.description }}
+        </div>
       </div>
 
       {{ range $.Params.sections }} {{ $cols := .cols }}
-      <div class="resume-section">
+      <div class="resume-section" {{ if .name }}type="{{ .name }}"{{ end }}>
         <div class="resume-section-title">{{.name}}</div>
 
         {{ range .content }}
         <div class="resume-section-content">
           {{ if .title }}<span class="resume-text"
-            ><span class="resume-title">{{ .title }}</span>{{ if .subtitle }}<span
-              class="resume-subtitle"
-              >{{ .subtitle }}</span
-            >{{ end }} </span
+            ><span class="resume-title">{{ .title }}</span>{{ if .subtitle
+            }}<span class="resume-subtitle">{{ .subtitle }}</span>{{ end }} </span
           >{{ end }}{{ if .items }}{{ range .items }}<span
             class="resume-text-three-col"
             >{{.}}</span

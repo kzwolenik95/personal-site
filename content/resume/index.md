@@ -6,12 +6,13 @@ type: "resume"
 layout: "resume"
 menu:
   main:
-    name: "Print Resume"
+    name: "Download Resume"
     weight: -5
-    pre: '<a class=printButton href="" onclick=''if(window.location.pathname == "/resume/") { window.print(); } return false;'' style="display: none;"><i class="fas fa-print"></i>'
+    pre: '<a class=printButton href="/Resume - Krzysztof Zwolenik.pdf" download="Resume - Krzysztof Zwolenik.pdf"; style="display: none;"><i class="fas fa-print"></i>'
     post: '<script> if (window.location.pathname === "/resume/") { document.querySelectorAll(".printButton").forEach(el => el.style.display = ""); }</script>'
 name: Krzysztof Zwolenik
 pro_title: DevOps engineer
+description: DevOps Engineer with 7+ years of experience in the field, specializing in Kubernetes, Terraform, and cloud infrastructure automation. Proven track record of enhancing operational efficiency across teams to deliver scalable and reliable solutions.
 personal_data:
   - value: Bilbao, Spain
   - value: +34 694 254 557
@@ -69,17 +70,37 @@ sections:
         subtitle: Aditi – Bogota, Colombia, later Remote from Spain
         date: 2023.03 – Present
         description: |
-          As a Cloud Admin L2, **I manage Kubernetes clusters on Amazon EKS** as part of a Cluster-as-a-Service team, providing infrastructure for application teams across the organization. I operate and troubleshoot Terraform pipelines in GitLab that automate cluster provisioning and upgrades, working closely with the DevOps team responsible for maintaining the underlying Terraform modules. **I handle Kubernetes manifests for internal cluster-specific tools** and coordinate with AWS support to resolve infrastructure-related issues. I use Datadog to monitor cluster health, creating alerts and dashboards to ensure visibility for both our team and application owners. **My contributions include optimizing monitoring coverage while reducing Datadog costs** and enhancing team efficiency by developing CLI scripts that streamline routine tasks. I collaborate with application teams and the DevOps group to address cluster-related needs, ensuring reliable and scalable Kubernetes environments.
+          - Manage Kubernetes clusters on Amazon EKS as part of a Cluster-as-a-Service team, providing infrastructure for application teams.
+          - Operate and troubleshoot Terraform pipelines in GitLab for cluster provisioning and upgrades.
+          - Collaborate with the DevOps team to maintain and improve Terraform modules.
+          - Handle Kubernetes manifests for internal cluster-specific tools.
+          - Coordinate with AWS support to resolve infrastructure-related issues.
+          - Monitor cluster health using Datadog, creating alerts and dashboards for visibility.
+          - Optimize monitoring coverage while reducing Datadog costs.
+          - Enhance team efficiency by developing CLI scripts to streamline routine tasks.
+          - Work closely with application teams to address cluster-related needs and ensure reliable Kubernetes environments.
       - title: System Administrator
         subtitle: Comarch SAS – Bogota, Colombia
         date: 2019.06 — 2023.03
         description: |
-          As a System Administrator, I advanced to a 2nd line support role, **taking ownership of monitoring systems** and client communication. I managed on-premise Linux systems, Oracle databases, and evolving Java applications while supporting the transition of the web layer to Docker-based microservices and an early-stage Kubernetes deployment on OpenShift within the company's private cloud. **I implemented an automated interface for an internal tool, reducing a complex and error-prone one-hour manual process to a few minutes.** This automation not only improved operational efficiency but also minimized human error during critical workflows. **I automated server configurations using Bash, Python, and Ansible and maintained Jenkins pipelines**, troubleshooting deployments and contributing to permanent solutions. My monitoring responsibilities expanded **to configuring Prometheus and creating advanced Grafana dashboards** while continuing to enhance Nagios scripts for better system observability. I collaborated with international clients in Dominican Republic, Colombia and Argentina, addressing technical concerns and improving ticket response times. Additionally, I provided one-off SQL reports to meet client-specific requests, such as data integrity checks. Despite my new responsibilities, I continued to handle select tasks from my previous role to ensure consistent service quality and operational efficiency.
+          - Ownership of monitoring systems and client communication.
+          - Managed on-premise Linux systems, Oracle databases, and Java applications.
+          - Supported the transition to Docker-based microservices and early-stage Kubernetes on OpenShift.
+          - Automated a complex, error-prone manual process using an internal tool, reducing execution time from one hour to a few minutes.
+          - Maintained and troubleshot Jenkins pipelines, contributing to permanent solutions.
+          - Configured Prometheus and created advanced Grafana dashboards for monitoring.
+          - Improved system observability with Nagios by creating custom bash scripts.
+          - Collaborated with international clients (Dominican Republic, Colombia, and Argentina).
+          - Provided ad hoc SQL reports for client-specific requests like data integrity checks.
       - title: 1st line support enginner
         date: 2017.07 — 2019.06
         subtitle: Comarch SA – Cracow, Poland
         description: |
-          In this role, I provided technical support for on-premise Linux systems, Oracle databases, and Java applications on Apache, Tomcat, and Oracle WebLogic. **I automated routine tasks using Bash and Python scripts scheduled with cron, reducing manual work and improving efficiency.** I extended Nagios monitoring by creating custom scripts for system checks not covered by default, enhancing system visibility. By resolving tickets promptly and collaborating with 2nd line engineers and developers, I maintained high SLAs and improved incident response processes. I also documented monitoring procedures and standard operating workflows, facilitating better knowledge sharing across the team.
+          - Provided technical support for on-premise Linux systems, Oracle databases, and Java applications (Apache, Tomcat, and Oracle WebLogic).
+          - Automated routine tasks using Bash and Python scripts scheduled with cron, improving efficiency.
+          - Extended Nagios monitoring by creating custom scripts for system checks not covered by default.
+          - Maintained high SLAs by resolving tickets promptly and collaborating with 2nd line engineers and developers.
+          - Documented monitoring procedures and standard operating workflows to facilitate knowledge sharing across the team.
   - name: Education
     content:
       - title: Computer Science
